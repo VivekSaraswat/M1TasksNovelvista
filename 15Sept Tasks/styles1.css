@@ -1,0 +1,39 @@
+body{
+    background-color: blanchedalmond;
+}
+.myOuterBox{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; 
+}
+.myInnerBox{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+h1{
+    color : red;
+}
+h2{
+    color:indigo;
+}
+
+li{
+    color : blue;
+    font-size: larger;
+}
+input[type='text']{
+    border: 2px dashed hotpink;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+input[type='submit']{
+    border: 2px solid orangered;
+    border-radius: 25px;
+    width: 150px;
+    height: 30px;
+    font-family: monospace;
+    color:darkblue;
+    font-size: large;
+    background-color: lightgreen;
+}

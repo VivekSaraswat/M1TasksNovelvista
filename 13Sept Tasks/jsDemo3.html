@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            alert("Enter the list of Emails one at a time");
+            var i=0;
+            var j=0;
+            var x=[]
+            var arr=[];
+            var arr2=[];
+            while(confirm("Want to add more emails to the list?")==true){
+                arr[i]=(prompt("Enter "+(i+1)+" emailId"));
+                x=arr[i].split("@");
+                var y=x[1];
+                if(arr2.includes(y)==false){
+                    arr2[j++]=y;
+                }
+                i++;
+            }
+            for(var p=0;p<arr2.length;p++){
+                var count=0;
+                for(var q=0;q<arr.length;q++){
+                    if(arr[q].endsWith(arr2[p])){
+                        console.log(arr[q]);
+                        count++;
+                    }
+                }
+                console.log("Count="+count);
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Cargo Shipment Form</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/index.js"></script>
+    </head>
+    <body>
+        <form action="">
+            <h3>Cargo Shipment Form</h3>
+            <table>
+                <tr>
+                    <td>Name of Cargo</td>
+                    <td><input type="text" id="cargoName" size="30" required/></td>
+                </tr>
+                <tr>
+                    <td>Gross Weight(in KG)</td>
+                    <td><input type="number" id="cargoGrossWeight"/></td>
+                </tr>
+                <tr>
+                    <td>Net Weight(in KG)</td>
+                    <td><input type="number" id="cargoNetWeight"/></td>
+                </tr>
+                <tr>
+                    <td>Source</td>
+                    <td><select id="sourceSelect">
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="newdelhi">New Delhi</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Destination</td>
+                    <td><select id="destinationSelect">
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="newdelhi">New Delhi</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="submitButton" value="Submit Form" onclick="toValidate()"/></td>
+                </tr>
+                <tr>
+                    <td><div id="output"></div></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

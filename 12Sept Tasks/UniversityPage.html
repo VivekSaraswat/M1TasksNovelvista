@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <style type="text/css">
+            body{
+                background-image: url("UniversityPic.jpg");
+            }
+            #101{
+                border: 20px solid blue;
+                
+            }
+            form{
+                background-color:blanchedalmond;
+                width : 700px;
+                margin-left: 30%;
+                border-radius: 20px;
+            }
+            input[type=text] , input[type=date] ,input[type="number"], select{
+                border: 2px solid red;
+                border-style:dashed;
+                padding-left: 30px;
+                margin-left: 30px;
+            }
+            h1{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color:navy;
+                margin-left: 40%;
+                font-style: initial;
+            }
+            h3{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-style: italic;
+                color: brown;
+                margin-left: 20px;
+            }
+            input[type='radio'],input[type="checkbox"]{
+                width: 15px;
+                margin-left:10px;
+                color:blueviolet;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin-left: 30px;
+            }
+            input[type=submit] , input[type=reset]{
+                background-color: indianred;
+                color:navy;
+                width : 200px;
+                height : 50px;
+                font-size: large;
+                border-radius: 30px;
+            }
+            hr{
+                width:500px;
+                height:10px;
+            }
+            td{
+                margin-left: 25px;
+                text-align: justify;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>University Admission Form</h1>
+        <hr/>
+        <form method="post" action="#">
+        <table id="101">
+            <tr>
+                <td> <h3><u><b> Personal Details </b></u></h3> </td>
+            </tr>
+            <tr>
+                <td>Enter your Name</td>
+                <td><select>
+                    <option>Mr. </option>
+                    <option>Miss </option>
+                    <option>Mrs. </option>
+                </select>
+                <input type="text"/></td>
+            </tr>
+            <tr> 
+                <td>Enter your Date of birth</td>
+                <td><input type="date"/></td>
+            </tr>
+            <tr>
+                <td>Enter your Father's Name</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>Enter your Phone Number</td>
+                <td><input type="number" placeholder="910000000000"/></td>
+            </tr>
+            <tr>
+                <td>Enter your Email Id</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>Enter your Address</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td> <h3><u><b> Educational Details </b></u></h3> </td>
+            </tr>
+            <tr>
+                <td>Highest Qualification</td>
+                <td>
+                    <select>
+                        <option>Senior Secondary Education</option>
+                        <option>Secondary Education</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Name of School</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>Address of School</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>Board of School</td>
+                <td> 
+                    <input type="radio" id="cbse" name="board"/>
+                    <label for="cbse">CBSE</label>
+                    <input type="radio" id="icse" name="board"/>
+                    <label for="icse">ICSE</label> 
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your Percentage</td>
+                <td><input type="range" value="60" min="1" max="100" oninput="this.nextElementSibling.value = this.value"><output>60</output></td>
+            </tr>
+            <tr>
+                <td> <h3><u><b> Course Details </b></u></h3> </td>
+            </tr>
+            <tr>
+                <td>Select Course</td>
+                <td>
+                    <select>
+                        <option>Bachelor of Technology </option>
+                        <option>Bachelor of Computer Applications </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Branch</td>
+                <td>
+                    <select>
+                        <option>Computer Science</option>
+                        <option>Electrical</option>
+                        <option>Mechanical</option>
+                        <option>Electronics</option>
+                        <option>Information Technology</option>
+                        <option>Communications</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Interests</td>
+                <td>
+                <table>
+                    <tr>
+                        <td><input type="checkbox"/>AI and ML</td>
+                        <td><input type="checkbox"/>Devops</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/>Cloud Computing</td>
+                        <td><input type="checkbox"/>FullStack Development</td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <td><input id="button" type="submit"/></td>
+                <td><input id="button" type="reset"/></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

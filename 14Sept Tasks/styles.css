@@ -1,0 +1,147 @@
+.myOuterBox{
+    border: 5px solid teal;
+    width:100%;
+}
+.myBox1{
+    background-color: darkkhaki;
+    display: flex;
+    flex-direction: row;
+}
+.mybox2{
+    display : flex;
+    flex-direction: column;
+    margin-left: 30px;
+    align-self: center;
+}
+.myBox3{
+    display : flex;
+    flex-direction: row;
+    border: 5px solid blueviolet;
+}
+.myBox4{
+    display : flex;
+    flex-direction: column;
+    border: 5px solid aqua;
+    width : 450px;
+    background-color:aquamarine;
+}
+.myBox5{
+    display : flex;
+    flex-direction: column;
+}
+.myBox6{
+    display : flex;
+    flex-direction: row;
+    background-color: pink;
+    border: 2px solid black;
+}
+.myBox7{
+    display : flex;
+    flex-direction: row;
+    background-color: pink;
+}
+.myBox8{
+    display : flex;
+    flex-direction: row;
+    border: 2px solid black;
+    background-color: pink;
+}
+.myBox9{
+    display : flex;
+    flex-direction: column;
+    background-color: pink;
+    margin-left: 25px;
+}
+.myBox10{
+    display : flex;
+    flex-direction: row;
+}
+.myBox11{
+    display : flex;
+    flex-direction: column;
+}
+.myBox12{
+    display : flex;
+    flex-direction: row;
+    border:2px solid black;
+    background-color: burlywood;
+}
+.myBox13{
+    display : flex;
+    flex-direction: column;
+}
+.myBox14{
+    display : flex;
+    flex-direction: row;
+}
+.myBox15{
+    padding-left: 200px;
+}
+img{
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    padding-left: 20px;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:navy;
+    font-size: 50px;
+    font-style: oblique;
+    padding-top: 30px;
+    margin-left: 250px;
+}
+h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:purple;
+    font-size: 25px;
+    padding-left: 50px;
+}
+h3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:red;
+    font-size: 20px;
+}
+.User{
+    height: 100px;
+    width : 100px;
+    border-radius: 50px;
+    margin-top: 30px;
+    padding : 0px;
+}
+.Logo{
+    margin-left : 20px;
+    height: 125px;
+    width : 125px;
+    border-radius: 75px;
+    padding : 0px;
+}
+.myPic{
+    height : 175px;
+    width : 125px
+}
+.teacherPic{
+    height : 125px;
+    width : 75px;
+}
+.L110{
+    height:40px;
+    width:40px;
+
+}
+a:link {
+    color:red;
+}
+a:visited {
+    color:green;
+}
+a:hover {
+    color:blue;
+}
+table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: #96D4D4;
+    padding: 10px;
+  }

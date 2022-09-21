@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles2.css">
+        <script>
+            function validName(){
+                let x=document.getElementById("username").value;
+                var test="";
+                if(x==""||x==" "||x=="  "){
+                    test = "Enter valid Name";
+                    //alert("Enter valid Username");
+                    document.getElementById("demo").innerHTML=test;
+                }
+                else{
+                    document.getElementById("demo").innerHTML=test;
+                }
+            }
+
+            function validEmail(){
+                let x=document.getElementById("emailId").value;
+                var test="";
+                if((x.endsWith("@gmail.com"))||(x.endsWith("@yahoo.com"))){
+                    document.getElementById("demo1").innerHTML=test;
+                }
+                else{
+                    test = "Enter valid Email Id";
+                    //alert("Enter valid Email Id");
+                    document.getElementById("demo1").innerHTML=test;
+                }
+            }
+
+            function validPhoneNumber(){
+                let x=document.getElementById("phoneNumber").value;
+                let phoneNumb=parseInt(x);
+                let phoneNumber=phoneNumb.toString();
+                var test="";
+                if(phoneNumber.length!=10){
+                    test = "Enter valid Phone Number";
+                    //alert("Enter valid Phone Number");
+                    document.getElementById("demo2").innerHTML=test;
+                }
+                else{
+                    document.getElementById("demo2").innerHTML=test;
+                }
+            }
+
+            function validAge(){
+                let x = document.getElementById("age").value;
+                let age=parseInt(x);
+                var test="";
+                if(age<15 || age>17){
+                    test = "Enter valid Age";
+                    //alert("Enter valid Age");
+                    document.getElementById("demo3").innerHTML=test;
+                }
+                else{
+                    document.getElementById("demo3").innerHTML=test;
+                }
+            }
+
+            function validMarks(num){
+                let x=document.getElementsByTagName("input")[num].value;
+                let marks=parseInt(x);
+                if(marks<0 || marks>100){
+                    alert("Enter valid marks");
+                }
+            }
+
+            function addColor(num){
+                var marks=document.getElementsByTagName("input")[num].value;
+                if(marks>89){
+                    document.getElementsByTagName("input")[num].style.color="blue";
+                    document.getElementsByTagName("input")[num].style.backgroundColor="lightskyblue";
+                    document.getElementsByTagName("input")[num].style.fontStyle="normal";
+                }
+                else if(marks>=75){
+                    document.getElementsByTagName("input")[num].style.color="green";
+                    document.getElementsByTagName("input")[num].style.backgroundColor="palegreen";
+                    document.getElementsByTagName("input")[num].style.fontStyle="normal";
+                }
+                else if(marks>=60){
+                    document.getElementsByTagName("input")[num].style.color="black";
+                    document.getElementsByTagName("input")[num].style.backgroundColor="white"; 
+                    document.getElementsByTagName("input")[num].style.fontStyle="normal";
+                }
+                else if(marks>=50){
+                    document.getElementsByTagName("input")[num].style.color="orange";
+                    document.getElementsByTagName("input")[num].style.backgroundColor="lightgoldenrodyellow";
+                    document.getElementsByTagName("input")[num].style.fontStyle="normal";
+                }
+                else if(marks>=33){
+                    document.getElementsByTagName("input")[num].style.color="red";
+                    document.getElementsByTagName("input")[num].style.backgroundColor="lightpink";
+                    document.getElementsByTagName("input")[num].style.fontStyle="italic";
+                }
+                else if(marks<33){
+                    document.getElementsByTagName("input")[num].style.color="darkred";
+                    document.getElementsByTagName("input")[num].style.backgroundColor="pink";
+                    document.getElementsByTagName("input")[num].style.fontStyle="italic";
+                }
+            }
+
+            function calculatePercentage(){
+                let mathsMarks=parseInt(document.getElementById("maths").value);
+                let scienceMarks=parseInt(document.getElementById("science").value);
+                let englishMarks=parseInt(document.getElementById("english").value);
+                let socialScienceMarks=parseInt(document.getElementById("socialScience").value);
+                let hindiMarks=parseInt(document.getElementById("hindi").value);
+                var percentage=parseFloat((mathsMarks+scienceMarks+englishMarks+socialScienceMarks+hindiMarks)/5);
+                document.getElementById("totalMarks").innerHTML=percentage;
+            }
+
+            function streamAllocation(){
+                let mathsMarks=parseInt(document.getElementById("maths").value);
+                let scienceMarks=parseInt(document.getElementById("science").value);
+                let englishMarks=parseInt(document.getElementById("english").value);
+                let socialScienceMarks=parseInt(document.getElementById("socialScience").value);
+                let hindiMarks=parseInt(document.getElementById("hindi").value);
+                var percentage=parseFloat((mathsMarks+scienceMarks+englishMarks+socialScienceMarks+hindiMarks)/5);
+                
+                if((percentage>75)&&(mathsMarks>80)&&(scienceMarks>80)){
+                    document.getElementById("stream").innerHTML="Congratulation! You are alloted SCIENCE Stream!";
+                }
+                else if((percentage>60)&&(mathsMarks>80)&&(englishMarks>70)){
+                    document.getElementById("stream").innerHTML="Congratulation! You are alloted COMMERCE Stream!";
+                }
+                else if((percentage>50)&&(englishMarks>70)&&(socialScienceMarks>70)){
+                    document.getElementById("stream").innerHTML="Congratulation! You are alloted ARTS with English Stream!";
+                }
+                else if((percentage>50)&&(socialScienceMarks>70)){
+                    document.getElementById("stream").innerHTML="Congratulation! You are alloted ARTS Stream!";
+                }
+                else {
+                    document.getElementById("stream").innerHTML="NO STREAM ALLOTED";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="outerBox">
+            <div class="box1">
+                <h1><u>STUDENT STREAM ALLOCATION</u></h1>
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td><input id="username" type="text" onblur="validName()"/>
+                            <td><p id="demo"></p></td>
+                    </tr>
+                    <tr>
+                        <td>EmailId</td>
+                        <td><input id="emailId" type="text" onblur="validEmail()"/></td>
+                        <td><p id="demo1"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td><input id="phoneNumber" type="number" onblur="validPhoneNumber()"/></td>
+                        <td><p id="demo2"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><input id="age" type="number" onblur="validAge()"/></td>
+                        <td><p id="demo3"></p></td>
+                    </tr>
+                </table>
+                <h2> Marks Subject-wise</h2>
+                <table>
+                    <tr>
+                        <td>Science</td>
+                        <td><input id="science" type="number" onkeyup="addColor(4)" onblur="validMarks(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>Maths</td>
+                        <td><input id="maths" type="number" onkeyup="addColor(5)" onblur="validMarks(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td><input id="english" type="number" onkeyup="addColor(6)" onblur="validMarks(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td><input id="hindi" type="number" onkeyup="addColor(7)" onblur="validMarks(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>Social Science</td>
+                        <td><input id="socialScience" type="number" onkeyup="addColor(8)" onblur="validMarks(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>10th Percentage</td>
+                        <td><button id="calculate" onclick="calculatePercentage()">Calculate Percentage</button></td>
+                        <td><h3 id="totalMarks"></h3></td>
+                    </tr>
+                </table>
+                <button onclick="streamAllocation()">Allocate Stream</button>
+            </div>
+            <div class="box2">
+                <p id="stream"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            var grossSalary=55000;
+            var hra=(0.2)*grossSalary;
+            var netSalary=grossSalary+hra;
+            var investment=20000;
+            var taxableSalary=netSalary-investment;
+
+            var annualTaxableSalary = 12*taxableSalary;
+            var tax;
+            if(annualTaxableSalary<500000){
+                tax=0;
+            }
+            else if(annualTaxableSalary<1000000){
+                tax=(0.1)*annualTaxableSalary;
+            }
+            else if(annualTaxableSalary<2000000){
+                tax=(0.2)*annualTaxableSalary;
+            }
+            else{
+                tax=(0.3)*annualTaxableSalary;
+            }
+            console.log("Tax="+tax);
+            var annualIncome=annualTaxableSalary-tax;
+            console.log("Annual Income="+annualIncome);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

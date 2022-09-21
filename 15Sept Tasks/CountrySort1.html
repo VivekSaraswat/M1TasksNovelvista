@@ -1,0 +1,73 @@
+<html>
+    <head>
+        
+            <link rel="stylesheet" href="styles1.css">
+        <script>
+            function addCountryTask()
+			{
+                var asia=["India","Russia","China","Japan","Singapore"];
+                var africa=["Kenya", "Madagascar","Uganda","Zimbabwe","Somalia"];
+                var europe=["France","Spain","Germany","Italy","Norway"];
+                var namerica=["United States","Canada","Mexico","Greenland","Cuba"];
+                var samerica=["Argentina","Brazil","Chile","Peru","Venezuela"];
+
+				var country = document.getElementById("countryName").value;
+
+                if(asia.includes(country)==true){
+                    var olTag = document.getElementsByTagName("ol")[0];
+                }
+                else if(africa.includes(country)==true){
+                    var olTag = document.getElementsByTagName("ol")[1];  
+                }
+                else if(europe.includes(country)==true){
+                    var olTag = document.getElementsByTagName("ol")[2];                   
+                }
+                else if(namerica.includes(country)==true){
+                    var olTag = document.getElementsByTagName("ol")[3];    
+                }
+                else if(samerica.includes(country)==true){
+                    var olTag = document.getElementsByTagName("ol")[4];   
+                }
+
+				var liTag = document.createElement("li");
+			    
+                liTag.textContent=country+"";
+                
+                olTag.appendChild(liTag);
+			}
+
+        </script>
+
+    </head>
+    <body>
+        <h2>Country Name &nbsp;<input type="text" id="countryName" /> &nbsp;
+        <input type="submit" value="Add Country" onclick="addCountryTask()"/></h2><hr/>
+        <div class="myOuterBox">
+            <div class="myInnerBox">
+                <h1>Asia</h1>
+                <ol type="i">
+                </ol>
+            </div>
+            <div class="myInnerBox">
+                <h1>Africa</h1>
+                <ol type="i">
+                </ol>
+            </div>
+            <div class="myInnerBox">
+                <h1>Europe</h1>
+                <ol type="i">
+                </ol>
+            </div>
+            <div class="myInnerBox">
+                <h1>North-America</h1>
+                <ol type="i">
+                </ol>
+            </div>
+            <div class="myInnerBox">
+                <h1>South-America</h1>
+                <ol type="i">
+                </ol>
+            </div>  
+        </div>
+    </body>
+</html>

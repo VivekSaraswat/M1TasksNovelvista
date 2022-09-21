@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            var badWords=["Dog","Stupid","Idiot"];
+            var input=prompt("Enter message from User");
+            var output=input;
+            for(var i=0;i<badWords.length;i++){
+                var temp="";
+                if(input.includes(badWords[i])){
+                    for(var j=0;j<badWords[i].length;j++){
+                        temp=temp.concat("#");
+                    }
+                }
+                output=output.replaceAll(badWords[i],temp);
+            }
+            console.log(output);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
