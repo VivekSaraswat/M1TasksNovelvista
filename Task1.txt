@@ -1,0 +1,18 @@
+use onlineshoppingportal
+
+db.customers
+db.customers.insertMany([	{cus_name:"Vivek",cus_email:"vivek@gmail.com",cus_mob:"9772774300",cus_wallet:1000,cus_address:{cus_city:"Delhi",cus_pin:600012,cus_address:"CP"}},{cus_name:"Shubh",cus_email:"shubh@gmail.com",cus_mob:"1234567890",cus_wallet:1000,cus_address:{cus_city:"Jaipur",cus_pin:302039,cus_address:"Murlipura"}},{cus_name:"Abhi",cus_email:"abhi@gmail.com",cus_mob:"6377488854",cus_wallet:"1000},cus_address:{cus_city:"Delhi",cus_pin:600012,cus_address:"Market1"}}
+]);
+
+db.customers.find({cus_address.cus_pin:600012}).pretty();
+db.customers.find({cus_address.cus_city:"Delhi"}).pretty();
+
+db.orders
+db.orders.insertMany([{order_status:"delivered",order_amount:15000},{order_status:"pending",order_amount:20000},{order_status:"pending",order_amount:9999}]);
+db.orders.find({order_status:"pending"}).pretty();
+
+db.products
+db.product.insertMany([{prod_name:"Mobile",prod_cat:"Devices",prod_price:50000},{prod_name:"Table",prod_cat:"Furniture",prod_price:8000}]);
+db.product.find({},{prod_name:1,prod_price:1,_id:0});
+
+
